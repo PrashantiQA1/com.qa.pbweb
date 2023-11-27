@@ -15,16 +15,16 @@ public class HomePageTest extends BaseTest {
 		String actual = hp.getHomePageTitle();
 		logger.pass("get the homepage title");
 		System.out.println(actual);
-		Assert.assertEquals("Scenarios", actual);	
+		Assert.assertEquals("Dashboard", actual);	
 		logger.pass("validated homepage title");
 	}
 	
 	@Test
-	public void testWebShopImgIsDisplayed()
+	public void testPbWebImgIsDisplayed()
 	{
 		logger = report.createTest("Test PbWeb Logo isDisplayed");
 		boolean flag = hp.pbwebImg();
-		logger.pass("locate the webshop logo");
+		logger.pass("locate the pbweb logo");
 		System.out.println(flag);
 		Assert.assertTrue(flag);
 		logger.pass("logo is present and is displayed");

@@ -1,35 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="5" passed="1" failed="1" skipped="1">
+<testng-results ignored="3" total="8" passed="2" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-25T23:29:20 EST" name="Default suite" finished-at="2023-11-25T23:29:39 EST" duration-ms="18577">
+  <suite started-at="2023-11-27T10:56:22 EST" name="Default suite" finished-at="2023-11-27T10:56:45 EST" duration-ms="23541">
     <groups>
     </groups>
-    <test started-at="2023-11-25T23:29:20 EST" name="Default test" finished-at="2023-11-25T23:29:39 EST" duration-ms="18577">
+    <test started-at="2023-11-27T10:56:22 EST" name="Default test" finished-at="2023-11-27T10:56:45 EST" duration-ms="23541">
       <class name="com.pbweb.testcase.BaseTest">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:com.pbweb.testcase.BaseTest@ea6147e]" started-at="2023-11-25T23:29:20 EST" name="setUpReport" finished-at="2023-11-25T23:29:20 EST" duration-ms="276" status="PASS">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:com.pbweb.testcase.BaseTest@1e683a3e]" started-at="2023-11-27T10:56:22 EST" name="setUpReport" finished-at="2023-11-27T10:56:22 EST" duration-ms="232" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
       </class> <!-- com.pbweb.testcase.BaseTest -->
-      <class name="com.pbweb.testcase.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pbweb.testcase.HomePageTest@4d02f94e]" started-at="2023-11-25T23:29:21 EST" name="setUp" finished-at="2023-11-25T23:29:25 EST" duration-ms="4756" status="PASS">
+      <class name="com.pbweb.testcase.CreateScenariosTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pbweb.testcase.CreateScenariosTest@7a419da4]" started-at="2023-11-27T10:56:33 EST" name="setUp" finished-at="2023-11-27T10:56:35 EST" duration-ms="1827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testHomePageTitle()[pri:0, instance:com.pbweb.testcase.HomePageTest@4d02f94e]" started-at="2023-11-25T23:29:25 EST" name="testHomePageTitle" finished-at="2023-11-25T23:29:25 EST" duration-ms="48" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="testCreateScenarioButtonDisplayed()[pri:0, instance:com.pbweb.testcase.CreateScenariosTest@7a419da4]" started-at="2023-11-27T10:56:35 EST" name="testCreateScenarioButtonDisplayed" finished-at="2023-11-27T10:56:35 EST" duration-ms="2" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[expected [Dashboard] but found [Scenarios]]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.click()" because "this.CreateScenario" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Dashboard] but found [Scenarios]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at com.pbweb.testcase.HomePageTest.testHomePageTitle(HomePageTest.java:18)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "this.CreateScenario" is null
+at com.pbweb.pages.Createscenarios.clickCreateScenarioButton(Createscenarios.java:27)
+at com.pbweb.testcase.CreateScenariosTest.testCreateScenarioButtonDisplayed(CreateScenariosTest.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateScenarioButtonDisplayed -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pbweb.testcase.CreateScenariosTest@7a419da4]" started-at="2023-11-27T10:56:35 EST" name="tearDown" finished-at="2023-11-27T10:56:39 EST" duration-ms="3845" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateScenarioButtonDisplayed status=FAILURE method=CreateScenariosTest.testCreateScenarioButtonDisplayed()[pri:0, instance:com.pbweb.testcase.CreateScenariosTest@7a419da4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pbweb.testcase.CreateScenariosTest@7a419da4]" started-at="2023-11-27T10:56:39 EST" name="setUp" finished-at="2023-11-27T10:56:41 EST" duration-ms="1902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testScenariosTitle()[pri:0, instance:com.pbweb.testcase.CreateScenariosTest@7a419da4]" started-at="2023-11-27T10:56:41 EST" name="testScenariosTitle" finished-at="2023-11-27T10:56:41 EST" duration-ms="17" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<Scenarios> but was:<null>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<Scenarios> but was:<null>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:82)
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:87)
+at com.pbweb.testcase.CreateScenariosTest.testScenariosTitle(CreateScenariosTest.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -63,31 +118,52 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testHomePageTitle -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pbweb.testcase.HomePageTest@4d02f94e]" started-at="2023-11-25T23:29:25 EST" name="tearDown" finished-at="2023-11-25T23:29:32 EST" duration-ms="6285" status="PASS">
+        </test-method> <!-- testScenariosTitle -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pbweb.testcase.CreateScenariosTest@7a419da4]" started-at="2023-11-27T10:56:41 EST" name="tearDown" finished-at="2023-11-27T10:56:44 EST" duration-ms="3788" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testHomePageTitle status=FAILURE method=HomePageTest.testHomePageTitle()[pri:0, instance:com.pbweb.testcase.HomePageTest@4d02f94e] output={null}]]]>
+                <![CDATA[[TestResult name=testScenariosTitle status=FAILURE method=CreateScenariosTest.testScenariosTitle()[pri:0, instance:com.pbweb.testcase.CreateScenariosTest@7a419da4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pbweb.testcase.HomePageTest@4d02f94e]" started-at="2023-11-25T23:29:32 EST" name="setUp" finished-at="2023-11-25T23:29:35 EST" duration-ms="2961" status="PASS">
+      </class> <!-- com.pbweb.testcase.CreateScenariosTest -->
+      <class name="com.pbweb.testcase.HomePageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pbweb.testcase.HomePageTest@2053d869]" started-at="2023-11-27T10:56:22 EST" name="setUp" finished-at="2023-11-27T10:56:25 EST" duration-ms="3550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testWebShopImgIsDisplayed()[pri:0, instance:com.pbweb.testcase.HomePageTest@4d02f94e]" started-at="2023-11-25T23:29:35 EST" name="testWebShopImgIsDisplayed" finished-at="2023-11-25T23:29:35 EST" duration-ms="72" status="PASS">
+        <test-method signature="testHomePageTitle()[pri:0, instance:com.pbweb.testcase.HomePageTest@2053d869]" started-at="2023-11-27T10:56:25 EST" name="testHomePageTitle" finished-at="2023-11-27T10:56:25 EST" duration-ms="43" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testWebShopImgIsDisplayed -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pbweb.testcase.HomePageTest@4d02f94e]" started-at="2023-11-25T23:29:35 EST" name="tearDown" finished-at="2023-11-25T23:29:37 EST" duration-ms="2661" status="PASS">
+        </test-method> <!-- testHomePageTitle -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pbweb.testcase.HomePageTest@2053d869]" started-at="2023-11-27T10:56:25 EST" name="tearDown" finished-at="2023-11-27T10:56:28 EST" duration-ms="2702" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testWebShopImgIsDisplayed status=SUCCESS method=HomePageTest.testWebShopImgIsDisplayed()[pri:0, instance:com.pbweb.testcase.HomePageTest@4d02f94e] output={null}]]]>
+                <![CDATA[[TestResult name=testHomePageTitle status=SUCCESS method=HomePageTest.testHomePageTitle()[pri:0, instance:com.pbweb.testcase.HomePageTest@2053d869] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pbweb.testcase.HomePageTest@2053d869]" started-at="2023-11-27T10:56:28 EST" name="setUp" finished-at="2023-11-27T10:56:31 EST" duration-ms="2504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPbWebImgIsDisplayed()[pri:0, instance:com.pbweb.testcase.HomePageTest@2053d869]" started-at="2023-11-27T10:56:31 EST" name="testPbWebImgIsDisplayed" finished-at="2023-11-27T10:56:31 EST" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPbWebImgIsDisplayed -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pbweb.testcase.HomePageTest@2053d869]" started-at="2023-11-27T10:56:31 EST" name="tearDown" finished-at="2023-11-27T10:56:33 EST" duration-ms="2382" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testPbWebImgIsDisplayed status=SUCCESS method=HomePageTest.testPbWebImgIsDisplayed()[pri:0, instance:com.pbweb.testcase.HomePageTest@2053d869] output={null}]]]>
               </value>
             </param>
           </params>
@@ -96,7 +172,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- tearDown -->
       </class> <!-- com.pbweb.testcase.HomePageTest -->
       <class name="com.pbweb.testcase.LoginPageTest">
-        <test-method signature="testLoginFunction(java.lang.String, java.lang.String)[pri:0, instance:com.pbweb.testcase.LoginPageTest@2b48a640]" started-at="2023-11-25T23:29:39 EST" name="testLoginFunction" data-provider="wsdata" finished-at="2023-11-25T23:29:39 EST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFunction(java.lang.String, java.lang.String)[pri:0, instance:com.pbweb.testcase.LoginPageTest@14555e0a]" started-at="2023-11-27T10:56:45 EST" name="testLoginFunction" data-provider="pbweblogindata" finished-at="2023-11-27T10:56:45 EST" duration-ms="0" status="SKIP">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.toString()" because the return value of "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" is null]]>
@@ -131,7 +207,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.toString()" because the return value of "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" is null
 at com.pbweb.utils.ExcelUtil.getCellData(ExcelUtil.java:55)
-at com.pbweb.testcase.BaseTest.testData(BaseTest.java:76)
+at com.pbweb.testcase.BaseTest.testData(BaseTest.java:77)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

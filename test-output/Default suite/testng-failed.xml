@@ -3,14 +3,6 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pbweb.testcase.HomePageTest">
-        <methods>
-          <include name="testHomePageTitle"/>
-          <include name="setUpReport"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.pbweb.testcase.HomePageTest -->
       <class name="com.pbweb.testcase.LoginPageTest">
         <methods>
           <include name="testLoginFunction"/>
@@ -19,6 +11,15 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- com.pbweb.testcase.LoginPageTest -->
+      <class name="com.pbweb.testcase.CreateScenariosTest">
+        <methods>
+          <include name="testScenariosTitle"/>
+          <include name="testCreateScenarioButtonDisplayed"/>
+          <include name="setUpReport"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.pbweb.testcase.CreateScenariosTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

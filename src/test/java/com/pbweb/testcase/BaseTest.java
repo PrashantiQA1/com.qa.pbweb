@@ -16,6 +16,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.pbweb.driver.DriverScript;
 import com.pbweb.pages.HomePage;
 import com.pbweb.pages.LoginPage;
+import com.pbweb.pages.Createscenarios;
 import com.pbweb.utils.ExcelUtil;
 import com.pbweb.utils.HelperUtil;
 
@@ -26,7 +27,7 @@ public class BaseTest extends DriverScript {
 	static ExtentTest logger;
 	HomePage hp;
 	LoginPage lp;
-	
+	Createscenarios cs;
 	
 	@BeforeSuite
 	public void setUpReport()
@@ -42,7 +43,7 @@ public class BaseTest extends DriverScript {
 		initApplication();
 		hp = new HomePage();
 		lp = new LoginPage();
-		
+		cs = new Createscenarios();
 	}
 	
 	@AfterMethod
@@ -63,7 +64,7 @@ public class BaseTest extends DriverScript {
 		quitDriver();
 	}
 	
-	@DataProvider(name="wsdata")
+	@DataProvider(name="pbweblogindata")
 	public Object[][] testData()
 	{
 		ExcelUtil excel = new ExcelUtil("./src/test/resources/testdata/pbweblogindata.xlsx");

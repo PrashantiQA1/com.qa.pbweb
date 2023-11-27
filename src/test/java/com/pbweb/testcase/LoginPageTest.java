@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class LoginPageTest extends BaseTest {
 	
-	@Test(dataProvider = "wsdata")
+	@Test(dataProvider = "pbweblogindata")
 	public void testLoginFunction(String username, String password)
 	{
 		logger = report.createTest("Test Login Function");
