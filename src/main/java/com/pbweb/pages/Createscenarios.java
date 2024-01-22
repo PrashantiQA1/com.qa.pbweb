@@ -12,7 +12,7 @@ public class Createscenarios extends DriverScript {
 	// ********************************************* Page Elements *********************************************//
 		
 		
-		@FindBy(linkText = "Create New Scenario") WebElement CreateScenario;
+	//	@FindBy(linkText = "Create New Scenario") WebElement CreateScenario;
 		@FindBy(id = "createnewscenario") WebElement CreateScenarioButton;
 		
 		// ********************************************* Page Initialization *********************************************//
@@ -24,14 +24,16 @@ public class Createscenarios extends DriverScript {
 	}
 		public boolean clickCreateScenarioButton()
 		{
-			CreateScenario.click();
+			CreateScenarioButton.click();
 			return false;
 		}
       public String ScenarioPagetitle() 
       {
-    	  
-        System.out.println(driver.getTitle());
-		return null;  
+    	  //CreateScenario.click(); 
+    	  String title= driver.getTitle();
+        System.out.println(title);
+		return title;  
       }
+	
       
 }
